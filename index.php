@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: auth-signin.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +64,8 @@
                     <div class="main-body">
                         <div class="page-wrapper">
                             <!-- [ Main Content ] start -->
+                            <h2>Welcome, <?php echo $_SESSION['name']; ?>!</h2>
+
                             <div class="row">
                                 <!--[ daily sales section ] start-->
                                 <div class="col-md-6 col-xl-4">

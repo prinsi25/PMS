@@ -1,15 +1,10 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = ""; 
-$db   = "pharmacy"; 
+$password = ""; 
+$database  = "pharmacy"; 
 
-$conn = mysqli_connect($host, $user, $pass, $db);
+$con = mysqli_connect($host, $user, $password, $database);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-else{
-    echo("hello");
-}
+
 ?>

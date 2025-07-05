@@ -121,7 +121,7 @@
             font-size: 16px;
             line-height: 24px;
             font-weight: 400;
-            color: #6D7081;
+            color:rgb(60, 63, 79);
         }
 
 
