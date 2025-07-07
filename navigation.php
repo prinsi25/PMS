@@ -1,7 +1,7 @@
 <nav class="pcoded-navbar">
         <div class="navbar-wrapper">
             <div class="navbar-brand header-logo">
-                <a href="index-2.php" class="b-brand">
+                <a href="index.php" class="b-brand">
                     <div class="b-bg">
                         <i class="feather icon-trending-up"></i>
                     </div>
@@ -18,16 +18,16 @@
                     <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">User Authentication</span></a>
                         <ul class="pcoded-submenu">
+                            <li class=""><a href="auth-signup.php" class="" target="_blank">Admin Register</a></li>
                             <li class=""><a href="auth-signin.php" class="" target="_blank">Admin Login</a></li>
-                            <li class=""><a href="auth-signup.php" class="" target="_blank">Admin Logout</a></li>
-                            <li class=""><a href="auth-signup.php" class="" target="_blank">Cashier Login</a></li>
+                            <li class=""><a href="auth-signin.php" class="" target="_blank">Cashier Login</a></li>
                         </ul>
                     </li>
                     <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="#" class="">Total Medicines Stock</a></li>
-                            <li class=""><a href="#" class="">Daily/Mounthly Sales Seport</a></li>
+                            <li class=""><a href="total-medicine-stock.php" class="">Total Medicines Stock</a></li>
+                            <li class=""><a href="#" class="">Daily/Mounthly Sales Report</a></li>
                             <li class=""><a href="#" class="">Expiry Alert</a></li>
                         </ul>
                     </li>
@@ -43,33 +43,65 @@
                             <li class=""><a href="#" class="">Low-Stock Notification</a></li>
                         </ul>
                     </li>
-                    <!-- <li class="nav-item pcoded-menu-caption">
-                        <label>Forms & table</label>
-                    </li>
-                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                        <a href="form_elements.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
-                    </li>
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
-                        <a href="tbl_bootstrap.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Chart & Maps</label>
-                    </li>
-                    <li data-username="Charts Morris" class="nav-item"><a href="chart-morris.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a></li>
-                    <li data-username="Maps Google" class="nav-item"><a href="map-google.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Pages</label>
-                    </li>
-                    <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
-                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-shopping-cart"></i></span><span class="pcoded-mtext">Supplier Management</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="auth-signup.php" class="" target="_blank">Sign up</a></li>
-                            <li class=""><a href="auth-signin.php" class="" target="_blank">Sign in</a></li>
+                            <li class=""><a href="#" class="">Add Suplier</a></li>
+                            <li class=""><a href="#" class="">Track Purchase Orders</a></li>
+                            <li class=""><a href="#" class="">Supplier Contact & Payment Details</a></li>
                         </ul>
-                    </li> -->
-                    <!-- <li data-username="Sample Page" class="nav-item"><a href="sample-page.php" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
-                    <li data-username="Disabled Menu" class="nav-item disabled"><a href="javascript:" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Disabled menu</span></a></li>
-                </ul>  -->
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Customer & Prescription</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">Add Customer</a></li>
+                            <li class=""><a href="#" class="">Track Purchase Orders</a></li>
+                            <li class=""><a href="#" class="">Supplier Contact & Payment Details</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-edit"></i></span><span class="pcoded-mtext">Billing & Sales</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">Medicine Bill</a></li>
+                            <li class=""><a href="#" class="">Calculate Total</a></li>
+                            <li class=""><a href="#" class="">Apply Discount</a></li>
+                            <li class=""><a href="#" class="">Billing Record</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-x-square"></i></span><span class="pcoded-mtext">Expiry & Return</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">Track Medicine Nearing Expiry Date</a></li>
+                            <li class=""><a href="#" class="">Manage Expiry Stock</a></li>
+                            <li class=""><a href="#" class="">Return Expiry Medicine</a></li>
+                            <li class=""><a href="#" class="">Stock Record Pending Sale,Total</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Reports</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">Daily,Mounthly and Years Report</a></li>
+                            <li class=""><a href="#" class="">Expiry Medicine Reports</a></li>
+                            <li class=""><a href="#" class="">Profit/Loss</a></li>
+                        </ul>
+                    </li> 
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-cloud-snow"></i></span><span class="pcoded-mtxt">Notification</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">Low Stock</a></li>
+                            <li class=""><a href="#" class="">Expiry Reminder</a></li>
+                            <li class=""><a href="#" class="">Payment Due Alert</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-settings"></i></span><span class="pcoded-mtext">Setting</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">GST Configuration</a></li>
+                            <li class=""><a href="#" class="">Add User OR Role</a></li>
+                            <li class=""><a href="#" class="">Invoice Format Setting</a></li>
+                            <li class=""><a href="#" class="">Data Backup</a></li>
+                        </ul>
+                    </li>                 
             </div>
         </div>
     </nav>

@@ -16,7 +16,7 @@
           
 	}
 
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,12 +74,32 @@
                         <div class="input-group mb-4">
                             <input type="password" class="form-control" placeholder="password" name="password">
                         </div>
-                        <div class="form-group text-left">
+                        <div class="input-group mb-4">
+                        <select name="role" class="form-control" required id="role-select" style="color: #acb0b5;">
+                            <option value="" disabled selected hidden style="color: #acb0b5;">Select Role</option>
+                            <option value="admin" style="color: #000000;">Admin</option>
+                            <option value="cashier" style="color: #000000;">Cashier</option>
+                        </select>
+                        </div>
+
+                        <script>
+                        const select = document.getElementById("role-select");
+                        select.addEventListener("change", function () {
+                            // When user selects a valid option, make the text black
+                            if (select.value !== "") {
+                            select.style.color = "#000000"; // black
+                            }
+                        });
+                        </script>
+
+
+
+                        <!-- <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="">
                                 <label for="checkbox-fill-1" class="cr"> Save Details</label>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-2" id="checkbox-fill-2">
