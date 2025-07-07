@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'";
+    $sql = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password'";
     $result = mysqli_query($con, $sql);
 
     if (mysqli_num_rows($result) > 0)
@@ -92,8 +92,8 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <button class="btn btn-primary shadow-2 mb-4" name="submit" type="submit">Login</button>
-                        <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p>
-                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p>
+                        <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.php">Reset</a></p>
+                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-register.php">Register</a></p>
                     </div>
                 </div>
             </div>

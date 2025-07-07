@@ -46,7 +46,7 @@ if (!isset($_SESSION['email'])) {
     </div>
     <!-- [ Pre-loader ] End -->
     <!-- [ navigation menu ] start -->
-    <?php include "navigation.php" ?>
+    <?php include "cashier_nav.php" ?>
     <!-- [ navigation menu ] end -->
 
     <!-- [ Header ] start -->
@@ -60,7 +60,7 @@ if (!isset($_SESSION['email'])) {
             <div class="pcoded-content">
                 
                 <div class="pcoded-inner-content">
-                    
+                    <h3>Cashier Dashboard</h3>
                     <!-- [ breadcrumb ] start -->
                     <center><h3>Welcome, <?php echo $_SESSION['name']; ?>!</h3></center>
                     <!-- [ breadcrumb ] end -->

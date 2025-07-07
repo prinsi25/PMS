@@ -18,7 +18,7 @@
                     <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">User Authentication</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="auth-signup.php" class="" target="_blank">Admin Register</a></li>
+                            <li class=""><a href="auth-register.php" class="" target="_blank">Admin logout</a></li>
                             <li class=""><a href="auth-signin.php" class="" target="_blank">Admin Login</a></li>
                             <li class=""><a href="auth-signin.php" class="" target="_blank">Cashier Login</a></li>
                         </ul>
@@ -35,7 +35,7 @@
                     <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Medicine Inventory</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="#" class="">Add/Edit/delete/update Medicine</a></li>
+                            <li class=""><a href="modify0_medicine.php" class="">Add/Edit/delete/update Medicine</a></li>
                             <li class=""><a href="#" class="">Price</a></li>
                             <li class=""><a href="#" class="">Expiry Date</a></li>
                             <li class=""><a href="#" class="">Batch Number & Brand</a></li>

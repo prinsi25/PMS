@@ -1,13 +1,13 @@
 <?php 
     include("config.php");
-	// $con=mysqli_connect("localhost","root","","pharmacy");
+
 	if(isset($_POST['submit']))
 	{
         $name=$_POST['name'];
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 
-		$sql="insert into `user`(`name`,`email`,`password`)values('$name','$email','$password')";
+		$sql="insert into `users`(`name`,`email`,`password`)values('$name','$email','$password')";
 		mysqli_query($con,$sql);
 
 		echo "data inserted...";
@@ -15,6 +15,7 @@
         exit;
           
 	}
+
 
  ?>
 <!DOCTYPE html>
@@ -87,7 +88,7 @@
                             </div>
                         </div>
                             <button class="btn btn-primary shadow-2 mb-4" name="submit" type="submit">register</button>
-                        <p class="mb-0 text-muted">Allready have an account? <a href="auth-signin.html"> Log in</a></p>
+                        <p class="mb-0 text-muted">Allready have an account? <a href="auth-signin.php"> Log in</a></p>
                     </div>
                 </div>
             </div>
