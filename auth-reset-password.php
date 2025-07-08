@@ -1,6 +1,11 @@
 <?php
+<<<<<<< HEAD
     session_start();
     include ("config.php"); // This should define $conn
+=======
+session_start();
+include 'config.php'; // This should define $conn
+>>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -8,7 +13,11 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
+<<<<<<< HEAD
 if (isset($_POST['submit']) {
+=======
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+>>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
     $user_id = $_SESSION['user_id'];
     $old_pass = $_POST['old_password'];
     $new_pass = $_POST['new_password'];
@@ -91,7 +100,11 @@ if (isset($_POST['submit']) {
                             <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" required>
                         </div>
                         <button class="btn btn-primary mb-4 shadow-2" name="submit" type="submit">Reset Password</button>
+<<<<<<< HEAD
                         <p class="mb-0 text-muted">Don’t have an account? <a href="auth-register.php">Signup</a></p>
+=======
+                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p>
+>>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
                     </div>
                 </div>
 
