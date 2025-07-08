@@ -3,6 +3,10 @@
     session_start();
    
 
+    if(isset($_POST['demo'])){
+        header('location:demo.php');
+    }
+
 if (isset($_POST['submit'])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_id = $_SESSION['user_id'];
