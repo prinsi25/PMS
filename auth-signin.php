@@ -1,3 +1,4 @@
+
 <?php 
 session_start();
 include("config.php");
@@ -6,7 +7,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM `user` WHERE `email` = '$email' AND `password` = '$password'";
+    $sql = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password'";
     $result = mysqli_query($con, $sql);
 
     if (mysqli_num_rows($result) > 0)
@@ -22,7 +23,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +57,9 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+
     <form method="POST">
+
         <div class="auth-wrapper">
             <div class="auth-content">
                 <div class="auth-bg">
@@ -71,6 +73,7 @@ if (isset($_POST['submit'])) {
                         <div class="mb-4">
                             <i class="feather icon-unlock auth-icon"></i>
                         </div>
+
                         <h3 class="mb-4">Login</h3>
                         <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
 
@@ -79,6 +82,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="input-group mb-4">
                             <input type="password" class="form-control" placeholder="password" name="password">
+
                         </div>
                         <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
@@ -86,20 +90,17 @@ if (isset($_POST['submit'])) {
                                 <label for="checkbox-fill-a1" class="cr"> Save Details</label>
                             </div>
                         </div>
-                        <button class="btn btn-primary shadow-2 mb-4" name="submit" type="submit">Login</button>
-                        <p class="mb-2 text-muted">
-                            Forgot password? <a href="auth-reset-password.php">Reset</a>
-                        </p>
-                        <p class="mb-0 text-muted">
-                            Don’t have an account? <a href="auth-signup.html">Signup</a>
-                        </p>
 
+                        <button class="btn btn-primary shadow-2 mb-4" name="submit" type="submit">Login</button>
+                        <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.php">Reset</a></p>
+                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-register.php">Register</a></p>
                         <!-- <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p>
                         <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p> -->
                     </div>
                 </div>
             </div>
         </div>
+
     </form>
 
     <!-- Required Js -->

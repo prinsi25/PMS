@@ -1,13 +1,13 @@
 <?php 
     include("config.php");
-	// $con=mysqli_connect("localhost","root","","pharmacy");
+
 	if(isset($_POST['submit']))
 	{
         $name=$_POST['name'];
 		$email=$_POST['email'];
 		$password=$_POST['password'];
-
-		$sql="insert into `user`(`name`,`email`,`password`)values('$name','$email','$password')";
+        
+		$sql="insert into `users`(`name`,`email`,`password`)values('$name','$email','$password')";
 		mysqli_query($con,$sql);
 
 		echo "data inserted...";
@@ -15,22 +15,20 @@
         exit;
           
 	}
+    session_start();
+    session_unset();
+    session_destroy();
 
+    // header("Location: auth-signin.php"); 
+    // exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from lite.codedthemes.com/datta-able/bootstrap/auth-signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jul 2025 04:19:50 GMT -->
 <head>
     <title>Pharmacy Management</title>
-    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 10]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-    <!-- Meta -->
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -91,23 +89,41 @@
                             }
                         });
                         </script>
-
-
-
                         <!-- <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="">
                                 <label for="checkbox-fill-1" class="cr"> Save Details</label>
                             </div>
-                        </div> -->
+                        </div> 
+                        <div class="form-group text-left">
                         <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-2" id="checkbox-fill-2">
-                                <!-- <label for="checkbox-fill-2" class="cr">Send me the <a href="#!"> Newsletter</a> weekly.</label> -->
+                                <label for="checkbox-fill-2" class="cr">Send me the <a href="#!"> Newsletter</a> weekly.</label>
                             </div>
+                        </div> -->
+                        <!-- <div class="input-group mb-4">
+                        <select name="role" class="form-control" required id="role-select" style="color: #acb0b5;">
+                            <option value="" disabled selected hidden style="color: #acb0b5;">Select Role</option>
+                            <option value="Cashier" style="color: #000000;" name="Cashier">Cashier</option>
+                            <option value="Customer/User" style="color: #000000;" name="Customer/User">Customer/User</option>
+                            <option value="Pharmstic" style="color: #000000;" name="Pharmstic">Pharmstic</option>
+                            <option value="Supplier" style="color: #000000;" name="Supplier">Supplier</option>
+
+                        </select>
                         </div>
+
+                        <script>
+                        const select = document.getElementById("role-select");
+                        select.addEventListener("change", function () {
+                            // When user selects a valid option, make the text black
+                            if (select.value !== "") {
+                            select.style.color = "#000000"; // black
+                            }
+                        });
+                        </script> -->
                             <button class="btn btn-primary shadow-2 mb-4" name="submit" type="submit">register</button>
-                        <p class="mb-0 text-muted">Allready have an account? <a href="auth-signin.html"> Log in</a></p>
+                        <p class="mb-0 text-muted">Allready have an account? <a href="auth-signin.php"> Log in</a></p>
                     </div>
                 </div>
             </div>
@@ -119,5 +135,4 @@
 
 </body>
 
-<!-- Mirrored from lite.codedthemes.com/datta-able/bootstrap/auth-signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jul 2025 04:19:50 GMT -->
 </html>

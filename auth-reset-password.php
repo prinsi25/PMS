@@ -1,17 +1,46 @@
+
+<?php
+    session_start();
+    include ("config.php"); // This should define $conn
+
+if (isset($_POST['submit'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $user_id = $_SESSION['user_id'];
+        $old_pass = $_POST['old_password'];
+        $new_pass = $_POST['new_password'];
+        $confirm_pass = $_POST['confirm_password'];
+
+        // Fetch user's old hashed password
+        $sql = "SELECT password FROM users WHERE id = '$user_id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        if ($row && password_verify($old_pass, $row['password'])) {
+            if ($new_pass === $confirm_pass) {
+                $hashed_pass = password_hash($new_pass, PASSWORD_DEFAULT);
+                $update = "UPDATE users SET password = '$hashed_pass' WHERE id = '$user_id'";
+                if (mysqli_query($conn, $update)) {
+                    echo "<script>alert('Password updated successfully.');</script>";
+                } else {
+                    echo "<script>alert('Failed to update password.');</script>";
+                }
+            } else {
+                echo "<script>alert('New password and confirm password do not match.');</script>";
+            }
+        } else {
+            echo "<script>alert('Old password is incorrect.');</script>";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from lite.codedthemes.com/datta-able/bootstrap/auth-reset-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Jul 2025 04:19:55 GMT -->
 <head>
     <title>Datta Able - Reset password</title>
-    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 10]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-    <!-- Meta -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -56,7 +85,7 @@
                             <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" required>
                         </div>
                         <button class="btn btn-primary mb-4 shadow-2" name="submit" type="submit">Reset Password</button>
-                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p>
+                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-register.php">Signup</a></p>
                     </div>
                 </div>
 
