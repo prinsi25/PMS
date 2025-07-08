@@ -1,3 +1,4 @@
+
 <?php
     session_start();
     include ("config.php"); // This should define $conn
@@ -36,9 +37,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
