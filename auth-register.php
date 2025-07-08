@@ -15,20 +15,13 @@
         exit;
           
 	}
-
-<<<<<<< HEAD:auth-register.php
     session_start();
     session_unset();
     session_destroy();
 
     // header("Location: auth-signin.php"); 
     // exit;
-
-
- ?>
-=======
 ?>
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7:auth-signup.php
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,8 +72,6 @@
                         <div class="input-group mb-4">
                             <input type="password" class="form-control" placeholder="password" name="password">
                         </div>
-<<<<<<< HEAD:auth-register.php
-=======
                         <div class="input-group mb-4">
                         <select name="role" class="form-control" required id="role-select" style="color: #acb0b5;">
                             <option value="" disabled selected hidden style="color: #acb0b5;">Select Role</option>
@@ -98,21 +89,14 @@
                             }
                         });
                         </script>
-
-
-
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7:auth-signup.php
                         <!-- <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="">
                                 <label for="checkbox-fill-1" class="cr"> Save Details</label>
                             </div>
-                        </div> -->
-<<<<<<< HEAD:auth-register.php
-                        <!-- <div class="form-group text-left">
-=======
+                        </div> 
                         <div class="form-group text-left">
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7:auth-signup.php
+                        <div class="form-group text-left">
                             <div class="checkbox checkbox-fill d-inline">
                                 <input type="checkbox" name="checkbox-fill-2" id="checkbox-fill-2">
                                 <label for="checkbox-fill-2" class="cr">Send me the <a href="#!"> Newsletter</a> weekly.</label>

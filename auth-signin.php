@@ -92,20 +92,10 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <button class="btn btn-primary shadow-2 mb-4" name="submit" type="submit">Login</button>
-<<<<<<< HEAD
                         <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.php">Reset</a></p>
                         <p class="mb-0 text-muted">Don’t have an account? <a href="auth-register.php">Register</a></p>
-=======
-                        <p class="mb-2 text-muted">
-                            Forgot password? <a href="auth-reset-password.php">Reset</a>
-                        </p>
-                        <p class="mb-0 text-muted">
-                            Don’t have an account? <a href="auth-signup.html">Signup</a>
-                        </p>
-
                         <!-- <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p>
                         <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p> -->
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
                     </div>
                 </div>
             </div>

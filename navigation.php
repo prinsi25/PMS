@@ -18,11 +18,8 @@
                     <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">User Authentication</span></a>
                         <ul class="pcoded-submenu">
-<<<<<<< HEAD
                             <li class=""><a href="auth-register.php" class="" target="_blank">Admin logout</a></li>
-=======
                             <li class=""><a href="auth-signup.php" class="" target="_blank">Admin Register</a></li>
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
                             <li class=""><a href="auth-signin.php" class="" target="_blank">Admin Login</a></li>
                             <li class=""><a href="auth-signin.php" class="" target="_blank">Cashier Login</a></li>
                         </ul>

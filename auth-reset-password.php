@@ -1,47 +1,34 @@
 <?php
-<<<<<<< HEAD
     session_start();
     include ("config.php"); // This should define $conn
-=======
-session_start();
-include 'config.php'; // This should define $conn
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
 
-// Check if user is logged in
-if (!isset($_SESSION['user_id'])) {
-    echo "<script>alert('You must be logged in to reset your password.'); window.location.href = 'auth-login.php';</script>";
-    exit;
-}
+if (isset($_POST['submit'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $user_id = $_SESSION['user_id'];
+        $old_pass = $_POST['old_password'];
+        $new_pass = $_POST['new_password'];
+        $confirm_pass = $_POST['confirm_password'];
 
-<<<<<<< HEAD
-if (isset($_POST['submit']) {
-=======
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
-    $user_id = $_SESSION['user_id'];
-    $old_pass = $_POST['old_password'];
-    $new_pass = $_POST['new_password'];
-    $confirm_pass = $_POST['confirm_password'];
+        // Fetch user's old hashed password
+        $sql = "SELECT password FROM users WHERE id = '$user_id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
 
-    // Fetch user's old hashed password
-    $sql = "SELECT password FROM users WHERE id = '$user_id'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-
-    if ($row && password_verify($old_pass, $row['password'])) {
-        if ($new_pass === $confirm_pass) {
-            $hashed_pass = password_hash($new_pass, PASSWORD_DEFAULT);
-            $update = "UPDATE users SET password = '$hashed_pass' WHERE id = '$user_id'";
-            if (mysqli_query($conn, $update)) {
-                echo "<script>alert('Password updated successfully.');</script>";
+        if ($row && password_verify($old_pass, $row['password'])) {
+            if ($new_pass === $confirm_pass) {
+                $hashed_pass = password_hash($new_pass, PASSWORD_DEFAULT);
+                $update = "UPDATE users SET password = '$hashed_pass' WHERE id = '$user_id'";
+                if (mysqli_query($conn, $update)) {
+                    echo "<script>alert('Password updated successfully.');</script>";
+                } else {
+                    echo "<script>alert('Failed to update password.');</script>";
+                }
             } else {
-                echo "<script>alert('Failed to update password.');</script>";
+                echo "<script>alert('New password and confirm password do not match.');</script>";
             }
         } else {
-            echo "<script>alert('New password and confirm password do not match.');</script>";
+            echo "<script>alert('Old password is incorrect.');</script>";
         }
-    } else {
-        echo "<script>alert('Old password is incorrect.');</script>";
     }
 }
 ?>
@@ -100,11 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" required>
                         </div>
                         <button class="btn btn-primary mb-4 shadow-2" name="submit" type="submit">Reset Password</button>
-<<<<<<< HEAD
                         <p class="mb-0 text-muted">Don’t have an account? <a href="auth-register.php">Signup</a></p>
-=======
-                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p>
->>>>>>> 94ae4590a0eb216f0578e7a3eb273e9d27ef5ce7
                     </div>
                 </div>
 
